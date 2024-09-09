@@ -89,9 +89,9 @@ public class MainActivity extends AppCompatActivity {
 
                 else if (item.getItemId()==R.id.policy){
 
-                   // Intent intent = new Intent(Intent.ACTION_VIEW);
-                   // intent.setData(Uri.parse(""));
-                   // startActivity(intent);
+                    Intent intent = new Intent(Intent.ACTION_VIEW);
+                   intent.setData(Uri.parse("https://sites.google.com/view/extulprivacy-policy"));
+                    startActivity(intent);
 
 
 
