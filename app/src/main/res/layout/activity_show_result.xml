@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#D9D7D8"
+    tools:context=".Show_Result">
+
+
+    <LinearLayout
+        android:id="@+id/ss"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/color"
+        android:orientation="horizontal"
+
+        >
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:src="@drawable/back"
+            android:padding="@dimen/_10sdp"
+            android:layout_gravity="center_vertical"
+            android:clickable="true"
+            android:foreground="?attr/selectableItemBackground"
+            app:tint="@color/white" />
+
+        <TextView
+            android:id="@+id/bar_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pronunciation"
+            android:fontFamily="@font/kalpurush"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_20ssp"
+            android:gravity="center"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:layout_gravity="center"
+            />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        >
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_320sdp"
+            android:layout_marginLeft="@dimen/_15sdp"
+            android:layout_marginRight="@dimen/_15sdp"
+            android:backgroundTint="@color/bg"
+            app:cardCornerRadius="@dimen/_5sdp"
+            android:layout_marginTop="@dimen/_30ssp"
+            >
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_100sdp"
+                    android:background="@drawable/congress"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    >
+                    <com.airbnb.lottie.LottieAnimationView
+                        android:id="@+id/animationView"
+                        android:layout_width="@dimen/_220sdp"
+                        android:layout_height="@dimen/_220sdp"
+                        android:layout_centerHorizontal="true"
+                        app:lottie_autoPlay="true"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_above="@+id/aa"
+                        app:lottie_rawRes="@raw/congress" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Congratulations"
+                        android:textSize="@dimen/_25ssp"
+                        android:textColor="@color/color"
+                        android:fontFamily="@font/roboto"/>
+
+                    <TextView
+                        android:id="@+id/reslut"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Your band score is 6.5"
+                        android:textSize="@dimen/_18ssp"
+                        android:textColor="#1B1A1A"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/kalpurush"/>
+
+                </LinearLayout>
+
+
+
+
+
+            </RelativeLayout>
+
+
+
+
+
+        </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
+
+
+
+
+
+
+</RelativeLayout>
