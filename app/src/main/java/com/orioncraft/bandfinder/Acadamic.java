@@ -24,7 +24,7 @@ public class Acadamic extends Fragment {
 
 
     // Sample data for dropdown menu
-    String[] options = {"1", "1.5", "2", "2.5","3","3.5","4","4.5","5","5.5", "6", "6.5","7","7.5","8","8.5","9"};
+    String[] options = {"9", "8.5", "8", "7.5","7","6.5","6","5.5","5","4.5", "4", "3.5","3","2.5","2","1.5","1"};
 
 
     @Override

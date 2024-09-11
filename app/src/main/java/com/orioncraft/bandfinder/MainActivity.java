@@ -6,8 +6,12 @@ import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Looper;
 import android.view.MenuItem;
 import android.widget.FrameLayout;
+import android.widget.Toast;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
@@ -29,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
     ActionBarDrawerToggle toggle;
     BottomNavigationView bottomNavigationView;
     FrameLayout frameLayout;
+    boolean backpress = false;
 
 
     @Override
@@ -157,6 +162,33 @@ public class MainActivity extends AppCompatActivity {
         context.startActivity(intent);
 
     }
+
+    @Override
+    public void onBackPressed() {
+
+
+        if(backpress){
+            super.onBackPressed();
+        }
+
+        else if (this.backpress=true) {
+
+            Toast.makeText(MainActivity.this, "Press Twice to Exit.", Toast.LENGTH_LONG).show();
+
+            new Handler(Looper.getMainLooper()).postDelayed(new Runnable() {
+                @Override
+                public void run() {
+
+                    backpress=false;
+
+                }
+            },2000);
+
+        }
+
+
+    }
+
 
 
 }
