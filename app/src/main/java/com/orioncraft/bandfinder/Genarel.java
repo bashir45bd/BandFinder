@@ -8,6 +8,8 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
+import android.widget.AutoCompleteTextView;
 import android.widget.EditText;
 import android.widget.TextView;
 
@@ -15,8 +17,13 @@ import android.widget.TextView;
 
 public class Genarel extends Fragment {
 
-    EditText text1,text2,text3,text4,text5,text6;
+    EditText text1,text2;
     TextView reset1,reset2,reset3,calculate,calculate1,calculate2;
+
+    AutoCompleteTextView text3,text4,text5,text6;
+
+    // Sample data for dropdown menu
+    String[] options = {"1", "1.5", "2", "2.5","3","3.5","4","4.5","5","5.5", "6", "6.5","7","7.5","8","8.5","9"};
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -36,6 +43,44 @@ public class Genarel extends Fragment {
         calculate = view.findViewById(R.id.calculate);
         calculate1 = view.findViewById(R.id.calculate1);
         calculate2 = view.findViewById(R.id.calculate2);
+
+
+
+        // Create an ArrayAdapter
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(getActivity(),
+                android.R.layout.simple_dropdown_item_1line, options);
+
+        // Set the adapter to the AutoCompleteTextView
+        text3.setAdapter(adapter);
+
+
+        // Create an ArrayAdapter
+        ArrayAdapter<String> adapter1 = new ArrayAdapter<>(getActivity(),
+                android.R.layout.simple_dropdown_item_1line, options);
+
+        // Set the adapter to the AutoCompleteTextView
+        text4.setAdapter(adapter1);
+
+
+        // Create an ArrayAdapter
+        ArrayAdapter<String> adapter2 = new ArrayAdapter<>(getActivity(),
+                android.R.layout.simple_dropdown_item_1line, options);
+
+        // Set the adapter to the AutoCompleteTextView
+        text5.setAdapter(adapter2);
+
+
+        // Create an ArrayAdapter
+        ArrayAdapter<String> adapter3 = new ArrayAdapter<>(getActivity(),
+                android.R.layout.simple_dropdown_item_1line, options);
+
+        // Set the adapter to the AutoCompleteTextView
+        text6.setAdapter(adapter3);
+
+
+
+
+        
 
         calculate.setOnClickListener(new View.OnClickListener() {
             @Override
